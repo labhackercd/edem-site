@@ -33,7 +33,7 @@ li,
 blockquote,
 pre {
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 961px) {
@@ -43,7 +43,18 @@ pre {
   blockquote,
   pre {
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 2.5rem;
+  }
+}
+
+.-small-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 961px) {
+  .-small-text {
+    font-size: 1.2rem;
   }
 }
 
@@ -57,7 +68,7 @@ h5 {
 }
 
 h1 {
-  line-height: 3.5rem;
+  line-height: 3rem;
   font-size: 2.8rem;
 }
 
@@ -73,13 +84,13 @@ h1 {
 }
 
 h2 {
-  line-height: 2.5rem;
+  line-height: 2rem;
   font-size: 2rem;
 }
 
 @media (min-width: 961px) {
   h2 {
-    line-height: 3.5rem;
+    line-height: 3rem;
     font-size: 2.8rem;
   }
 }
@@ -89,13 +100,13 @@ h2 {
 }
 
 h3 {
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-size: 1.5rem;
 }
 
 @media (min-width: 961px) {
   h3 {
-    line-height: 3rem;
+    line-height: 2.5rem;
     font-size: 2rem;
   }
 }
@@ -105,13 +116,13 @@ h3 {
 }
 
 h4 {
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-size: 1rem;
 }
 
 @media (min-width: 961px) {
   h4 {
-    line-height: 3rem;
+    line-height: 2.5rem;
     font-size: 1.5rem;
   }
 }
@@ -122,13 +133,13 @@ h4 {
 
 h5 {
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: 1rem;
   font-size: 0.9rem;
 }
 
 @media (min-width: 961px) {
   h5 {
-    line-height: 2rem;
+    line-height: 1.5rem;
     font-size: 1rem;
   }
 }
@@ -431,4 +442,8 @@ body > main > section > .container {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../assets/images/edem-brandbg2.png");
+}
+
+.section-contact {
+  background-image: linear-gradient(#114433, #228855);
 }
