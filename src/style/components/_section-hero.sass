@@ -2,20 +2,15 @@
   width: 100%
   background-color: green
   color: #fff
-  min-height: 90vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  text-align: center
+  min-height: 80vh
   background-color: $color-background
   background-image: url("../assets/images/edem-brandbg1.png")
   background-size: cover
   background-repeat: no-repeat
   background-position: center
   position: relative
-  padding-top: $space-deca
-  padding-bottom: $space-deca
+  padding-top: $space-hecto
+  padding-bottom: $space-hecto
   &::before
     content: ''
     display: block
@@ -27,29 +22,37 @@
     background-image:  linear-gradient(transparent, $color-background)
     z-index: 0
 
-  > *
-    position: relative
-    z-index: 10
-  
-  > .title
-    +grid(8)
-    font-weight: 500
-    > em
-      font-weight: 600
+  > .container
+    +container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+
+    > *
       position: relative
-      z-index: 30
-      padding-right: 0.2em
-      padding-left: 0.2em
-      &::before
-        content: ''
-        display: block
-        position: absolute
-        bottom: 0
-        left: 0
-        right: 0
-        height: 1em
-        z-index: -20
-        background-color: rgba(#000, 0.3)
+      z-index: 10
     
-  > .edem-button
-    margin-top: $space-deca
+    > .title
+      +grid(8)
+      font-weight: 500
+      > em
+        font-weight: 600
+        position: relative
+        z-index: 30
+        padding-right: 0.2em
+        padding-left: 0.2em
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          top: 0.2em
+          bottom: 0.1em
+          left: 0
+          right: 0
+          z-index: -20
+          background-color: rgba(#000, 0.3)
+      
+    > .edem-button
+      margin-top: $space-deca

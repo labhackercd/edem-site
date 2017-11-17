@@ -12,8 +12,8 @@ $nOfColumnsMobile: 4 // EDIT HERE
 $gutterMobile: 0.5rem // EDIT HERE
 $columnWidthMobile: ( 100%/#{$nOfColumnsMobile} - #{$gutterMobile} )
 
-$tabletWidth: 64rem // EDIT HERE
-$mobileWidth: 48rem // EDIT HERE
+$tabletWidth: $screen-medium // EDIT HERE
+$mobileWidth: $screen-small // EDIT HERE
 
 @mixin grid($size)
   display: block

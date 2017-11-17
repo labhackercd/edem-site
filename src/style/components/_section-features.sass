@@ -1,16 +1,31 @@
-.section-feature
+.section-features
   width: 100%
   display: flow-root
+  background-color: $color-background
+  color: #fff
+  padding-bottom: $space-kilo
 
-  > .tool
-    +grid(3)
-    +media-smallonly
-      +offset(right, 1)
-      &:nth-child(2n)
-        +offset(left, 1)
-        text-align: right
-    +media-mediumdown
-      +grid(4)
-      margin: 0
-    +media-mediumup
-      margin: 0
+  .container
+    +container
+
+    > * + *
+      margin-top: $space-hecto
+
+    > .tool
+      +grid(3)
+      text-align: center
+      +media-smallonly
+        +offset(right, 1)
+        text-align: left
+        & + *
+          margin-top: $space-base
+        &:nth-child(2n)
+          +offset(left, 1)
+          text-align: right
+      +media-mediumonly
+        +grid(4)
+        &:nth-child(1),
+        &:nth-child(2)
+          margin-top: 0
+      +media-mediumup
+        margin: 0
