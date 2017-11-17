@@ -191,7 +191,7 @@ body > main > section {
 
 body > main > section > .container {
   width: calc(70% + 10rem);
-  max-width: 100%;
+  max-width: calc(100% - 2rem);
   margin-right: auto;
   margin-left: auto;
   display: flow-root;
@@ -243,7 +243,7 @@ body > main > section > .container {
 
 .section-hero > .container {
   width: calc(70% + 10rem);
-  max-width: 100%;
+  max-width: calc(100% - 2rem);
   margin-right: auto;
   margin-left: auto;
   display: flow-root;
@@ -318,7 +318,7 @@ body > main > section > .container {
 
 .section-features .container {
   width: calc(70% + 10rem);
-  max-width: 100%;
+  max-width: calc(100% - 2rem);
   margin-right: auto;
   margin-left: auto;
   display: flow-root;
