@@ -171,6 +171,9 @@ body > * {
 body > main > section {
   margin: 0;
   text-align: center;
+  width: 100%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 body > main > section > .container {
@@ -205,18 +208,15 @@ body > main > section > .container {
 }
 
 .section-hero {
-  width: 100%;
   background-color: green;
   color: #fff;
-  min-height: 80vh;
   background-color: #114433;
   background-image: url("../assets/images/edem-brandbg1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  min-height: 80vh;
 }
 
 .section-hero::before {
@@ -301,10 +301,10 @@ body > main > section > .container {
 }
 
 .section-features {
-  width: 100%;
   display: flow-root;
   background-color: #114433;
   color: #fff;
+  padding-top: 0;
   padding-bottom: 7rem;
 }
 
