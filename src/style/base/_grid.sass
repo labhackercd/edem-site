@@ -1,0 +1,45 @@
+// grid system
+
+$nOfColumns: 12 // EDIT HERE
+$gutter: 1rem // EDIT HERE
+$columnWidth: ( 100%/#{$nOfColumns} - #{$gutter} )
+
+$nOfColumnsTablet: 8 // EDIT HERE
+$gutterTablet: 0.5rem // EDIT HERE
+$columnWidthTablet: ( 100%/#{$nOfColumnsTablet} - #{$gutterTablet} )
+
+$nOfColumnsMobile: 4 // EDIT HERE
+$gutterMobile: 0.5rem // EDIT HERE
+$columnWidthMobile: ( 100%/#{$nOfColumnsMobile} - #{$gutterMobile} )
+
+$tabletWidth: 64rem // EDIT HERE
+$mobileWidth: 48rem // EDIT HERE
+
+@mixin grid($size)
+  display: block
+  float: left
+  width: calc( (#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter})
+  max-width: calc(100% - #{$gutter})
+  margin-right: calc(#{$gutter}/2)
+  margin-left: calc(#{$gutter}/2)
+
+  @media screen and (max-width: $tabletWidth)
+    width: calc( (#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet})
+    max-width: calc(100% - #{$gutterTablet})
+    margin-right: calc(#{$gutterTablet}/2)
+    margin-left: calc(#{$gutterTablet}/2)
+ 
+
+  @media screen and (max-width: $mobileWidth)
+    width: calc( (#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile})
+    max-width: calc(100% - #{$gutterMobile})
+    margin-right: calc(#{$gutterMobile}/2)
+    margin-left: calc(#{$gutterMobile}/2)
+
+@mixin offset($side, $size)
+  margin-#{$side}: calc((#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter} + 1.5*#{$gutter})
+  @media screen and (max-width: $tabletWidth)
+    margin-#{$side}: calc((#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet} + 1.5*#{$gutterTablet})
+ 
+  @media screen and (max-width: $mobileWidth)
+    margin-#{$side}: calc((#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile} + 1.5*#{$gutterMobile})
