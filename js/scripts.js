@@ -5,7 +5,7 @@ $(window).on('scroll', function () {
   var currentPosition = $(this).scrollTop();
   
   sections.each(function() {
-    var top = $(this).offset().top - nav.outerHeight() - 1,
+    var top = $(this).offset().top - nav.outerHeight() - 32,
         bottom = top + $(this).outerHeight();
     
     if (currentPosition >= top && currentPosition <= bottom) {
