@@ -1,0 +1,44 @@
+.edem-header
+  $height: $space-header
+  $height-small: $space-header-small
+  background-color: #fff
+  height: $height
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  transition: height 0.3s ease
+  box-shadow: 0 2px 8px rgba(#000, 0.4)
+  z-index: 60
+
+  &.-small
+    height: $height-small
+
+  > .container
+    +container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    > *
+      margin-top: 0
+
+    +media-mediumup
+      > .toggle-menu
+        display: none
+
+    > .cach-logo
+      background-color: green
+      width: 10rem
+      height: 2rem
+      background-repeat: no-repeat
+      background-size: 100%
+      background-position: center
+
+  +media-mediumdown
+    &:not(.-small) > .container > .cach-logo
+      background-color: green
+      height: 3rem
+      width: 7.5rem

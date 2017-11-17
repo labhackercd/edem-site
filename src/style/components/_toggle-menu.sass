@@ -1,0 +1,52 @@
+.toggle-menu 
+  $color: $color-edem-green
+
+  font-size: 24px
+  
+  width: 2em
+  height: 2em
+  position: relative
+  color: $color
+  cursor: pointer
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+
+  &:active
+    background-color: rgba(#000, 0.1)
+  +media-mediumup
+    &:hover 
+      background-color: rgba(#000, 0.1)
+  
+  &:before,
+  &:after 
+    content: ''
+    width: 1em
+    height: 0.125em
+    background-color: currentColor
+    display: block
+    position: absolute
+    transition: all 0.2s linear
+  
+  &:before 
+    top: 0.625em
+    left: 0.5em
+    box-shadow: 0 0.3125em 0 0 currentColor
+
+  &:after 
+    top: 1.25em
+    left: 0.5em
+  
+  &.-x 
+    transform: rotate(-90deg);
+
+    &:before,
+    &:after 
+      top: 0.9375em
+      left: 0.5em
+    
+    &:before 
+      transform: rotate(45deg)
+      box-shadow: 0 0 0 0 transparent
+    
+    &:after 
+      transform: rotate(-45deg)

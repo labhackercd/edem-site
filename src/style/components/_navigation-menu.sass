@@ -1,0 +1,46 @@
+.navigation-menu
+  display: flex
+
+  > a
+    font-weight: 400
+    color: #000
+    background: none
+    transition: color 0.3s ease
+
+    &.-active
+      color: $color-edem-green
+
+    &:hover
+      color: $color-edem-green
+
+  +media-mediumup
+    > a
+      margin: 0
+      margin-left: 2rem
+      line-height: 1
+  
+  +media-mediumdown
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 0
+    overflow-y: hidden
+    z-index: -10
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    background-color: #fff
+    transition: color 0.3s ease, height 0.4s ease
+    > a
+      opacity: 0
+      transition: opacity 0.4s ease
+      padding-top: 1rem
+      padding-bottom: 1rem
+      font-size: $font-size-deca
+      text-align: center
+
+    &.-open
+      height: 100vh
+      > a
+        opacity: 1

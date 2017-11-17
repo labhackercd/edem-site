@@ -9,63 +9,73 @@ html
   meta name="keywords" content="democracia"
   meta name="viewport" content="width=device-width, initial-scale=1.0"
   meta name="referrer" content="origin"
-  link rel="icon" type="image/png" href="./images/favicon.png"
+  / link rel="icon" type="image/png" href="./images/favicon.png"
 
   link href="./style/style.css" rel="stylesheet" type='text/css'
 
   body
 
-  header
-    a.logo e-Democracia
-
-  main
-
-    section.section-hero
+    header.edem-header
       .container
-        h1.title Uma plataforma <em>inovadora</em> de <em>transparência</em> e <em>participação</em> popular
-        button.edem-button Saiba mais
+        a.edem-logo href="#home" e-Democracia
+        button.toggle-menu
+        nav.navigation-menu
+          a href="#funcionalidades" Funcionalidades
+          a href="#cases" Cases
+          a href="#ferramentas" Ferramentas
+          a href="#contato" Entre em contato
 
-    section.section-features
-      .container
-        .tool
-          h3 Login unificado
-          p.-small-text O acesso a todas as ferramentas de participação do portal é feito através de um único login.
-        .tool
-          h3 Plataforma modular
-          p.-small-text Você pode escolher as ferramentas de participação do e-Democracia e montá-lo como for mais conveniente.
-        .tool
-          h3 Ambiente único
-          p.-small-text Todas as ferramentas de participação em um único ambiente, facilitando o desenvolvimento e suporte.
-        .tool
-          h3 Ferramentas integradas
-          p.-small-text Dentro do e-Democracia, as ferramentas podem interagir entre si através de APIs de forma simples e fácil.
+    main
 
-    section.section-users
-      .container
-        h2 Portais e-Democracia
-        a.user.-user-cd
-          h3 Câmara dos Deputados
-        a.user.-user-cldf
-          h3 Câmara Legislativa do Distrito Federal
+      section.section-hero#home
+        .container
+          h1.title Uma plataforma <em>inovadora</em> de <em>transparência</em> e <em>participação</em> popular
+          button.edem-button Saiba mais
 
-    section.section-tools
-      .container
-        h2 Ferramentas de Participação
-        p O e-Democracia é uma plataforma modular onde os modulos são as Ferramentas de Participação. Você pode escolher quais ferramentas de participação ter, e pode também desenvolver novas ferramentas.
-        .tool-card.-tool-aud
-          h3 Audiências Interativas
-          p.-small-text Acompanhe ao vivo e participe enviando perguntas aos deputados!
-        .tool-card.-tool-wik
-          h3 Wikilegis
-          p.-small-text Edite e aprimore projetos de lei artigo por artigo.
-        .tool-card.-tool-exp
-          h3 Expressão
-          p.-small-text Dê sua opinião sobre os assuntos que afetam a sua vida, discutindo soluções com outros cidadãos e os deputados.
-        .tool-card.-tool
-          p.-small-text Você também pode desenvolver sua própria ferramenta de participação para o e-Democracia!
+      section.section-features#funcionalidades
+        .container
+          .tool
+            h3 Login unificado
+            p.-small-text O acesso a todas as ferramentas de participação do portal é feito através de um único login.
+          .tool
+            h3 Plataforma modular
+            p.-small-text Você pode escolher as ferramentas de participação do e-Democracia e montá-lo como for mais conveniente.
+          .tool
+            h3 Ambiente único
+            p.-small-text Todas as ferramentas de participação em um único ambiente, facilitando o desenvolvimento e suporte.
+          .tool
+            h3 Ferramentas integradas
+            p.-small-text Dentro do e-Democracia, as ferramentas podem interagir entre si através de APIs de forma simples e fácil.
 
-    section.section-contact
-      .container
-        h2 Entre em contato
+      section.section-users#cases
+        .container
+          h2 Portais e-Democracia
+          a.user.-user-cd
+            h3 Câmara dos Deputados
+          a.user.-user-cldf
+            h3 Câmara Legislativa do Distrito Federal
 
-  footer
+      section.section-tools#ferramentas
+        .container
+          h2 Ferramentas de Participação
+          p O e-Democracia é uma plataforma modular onde os modulos são as Ferramentas de Participação. Você pode escolher quais ferramentas de participação ter, e pode também desenvolver novas ferramentas.
+          .tool-card.-tool-aud
+            h3 Audiências Interativas
+            p.-small-text Acompanhe ao vivo e participe enviando perguntas aos deputados!
+          .tool-card.-tool-wik
+            h3 Wikilegis
+            p.-small-text Edite e aprimore projetos de lei artigo por artigo.
+          .tool-card.-tool-exp
+            h3 Expressão
+            p.-small-text Dê sua opinião sobre os assuntos que afetam a sua vida, discutindo soluções com outros cidadãos e os deputados.
+          .tool-card.-tool
+            p.-small-text Você também pode desenvolver sua própria ferramenta de participação para o e-Democracia!
+
+      section.section-contact#contato
+        .container
+          h2 Entre em contato
+
+    footer
+
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    script src="js/scripts.js"
