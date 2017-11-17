@@ -183,6 +183,16 @@ body > main > section {
   letter-spacing: 0.04em;
   font-size: 1.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.edem-button:hover {
+  transform: translateY(-2px);
+}
+
+.edem-button:active {
+  transform: translateY(0);
+  opacity: 0.8;
 }
 
 .section-hero {
