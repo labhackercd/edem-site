@@ -227,6 +227,7 @@ body > main > section > .container {
   background-image: url("../assets/images/edem-brandbg1.png");
   position: relative;
   min-height: 80vh;
+  background-attachment: fixed;
 }
 
 .section-hero::before {
@@ -442,6 +443,7 @@ body > main > section > .container {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../assets/images/edem-brandbg2.png");
+  background-attachment: fixed;
 }
 
 .section-contact {
