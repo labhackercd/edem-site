@@ -3,19 +3,22 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: 0;
   color: inherit;
-  text-decoration: none;
+  text-decoration: 0;
   font-weight: 400;
   font-size: inherit;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+  font-weight: inherit;
+  font-style: inherit;
+  appearance: 0;
+  border: 0;
+  outline: 0;
+  background: 0;
+  border-radius: 0;
 }
 
 *:focus {
-  outline: none;
+  outline: 0;
 }
 
 html {
@@ -135,7 +138,7 @@ h5 {
 }
 
 ::selection {
-  background-color: #36c;
+  background-color: #3399CC;
 }
 
 html {
@@ -163,6 +166,108 @@ button {
 body,
 body > * {
   margin: 0;
+}
+
+.edem-button {
+  background-color: #fff;
+  color: #339966;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-hero {
+  width: 100%;
+  background-color: green;
+  color: #fff;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #114433;
+  background-image: url("../assets/images/edem-brandbg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-hero::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(transparent, #114433);
+  z-index: 0;
+}
+
+.section-hero > * {
+  position: relative;
+  z-index: 10;
+}
+
+.section-hero > .title {
+  display: block;
+  float: left;
+  width: calc( (8.33333% - 1rem)*8 + (8 - 1)*1rem);
+  max-width: calc(100% - 1rem);
+  margin-right: calc(1rem/2);
+  margin-left: calc(1rem/2);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 64rem) {
+  .section-hero > .title {
+    width: calc( (12.5% - 0.5rem)*8 + (8 - 1)*0.5rem);
+    max-width: calc(100% - 0.5rem);
+    margin-right: calc(0.5rem/2);
+    margin-left: calc(0.5rem/2);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .section-hero > .title {
+    width: calc( (25% - 0.5rem)*8 + (8 - 1)*0.5rem);
+    max-width: calc(100% - 0.5rem);
+    margin-right: calc(0.5rem/2);
+    margin-left: calc(0.5rem/2);
+  }
+}
+
+.section-hero > .title > em {
+  font-weight: 600;
+  position: relative;
+  z-index: 30;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+}
+
+.section-hero > .title > em::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1em;
+  z-index: -20;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.section-hero > .edem-button {
+  margin-top: 3rem;
 }
 
 .section-feature {
