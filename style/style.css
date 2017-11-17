@@ -179,6 +179,10 @@ body > * {
   margin: 0;
 }
 
+body > main {
+  overflow: hidden;
+}
+
 body > main > section {
   margin: 0;
   text-align: center;
@@ -228,6 +232,7 @@ body > main > section > .container {
   position: relative;
   min-height: 80vh;
   background-attachment: fixed;
+  display: flex;
 }
 
 .section-hero::before {
@@ -267,6 +272,8 @@ body > main > section > .container {
   margin-right: calc(1rem/2);
   margin-left: calc(1rem/2);
   font-weight: 500;
+  font-size: calc(2.8vw + 1rem);
+  line-height: calc(2.8vw + 1.5rem);
 }
 
 @media screen and (max-width: 960px) {

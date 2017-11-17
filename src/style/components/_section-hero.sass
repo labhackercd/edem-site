@@ -4,6 +4,7 @@
   position: relative
   min-height: 80vh
   background-attachment: fixed
+  display: flex
   &::before
     content: ''
     display: block
@@ -29,6 +30,8 @@
     > .title
       +grid(8)
       font-weight: 500
+      font-size: calc(2.8vw + 1rem)
+      line-height: calc(2.8vw + 1.5rem)
       > em
         font-weight: 600
         position: relative
@@ -45,6 +48,6 @@
           right: 0
           z-index: -20
           background-color: rgba(#000, 0.3)
-      
+
     > .edem-button
       margin-top: $space-deca
