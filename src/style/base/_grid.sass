@@ -1,19 +1,19 @@
 // grid system
 
-$nOfColumns: 12 // EDIT HERE
-$gutter: 1rem // EDIT HERE
+$nOfColumns: 12
+$gutter: $space-deci
 $columnWidth: ( 100%/#{$nOfColumns} - #{$gutter} )
 
-$nOfColumnsTablet: 8 // EDIT HERE
-$gutterTablet: 0.5rem // EDIT HERE
+$nOfColumnsTablet: 8
+$gutterTablet: $space-centi
 $columnWidthTablet: ( 100%/#{$nOfColumnsTablet} - #{$gutterTablet} )
 
-$nOfColumnsMobile: 4 // EDIT HERE
-$gutterMobile: 0.5rem // EDIT HERE
+$nOfColumnsMobile: 4
+$gutterMobile: $space-centi
 $columnWidthMobile: ( 100%/#{$nOfColumnsMobile} - #{$gutterMobile} )
 
-$tabletWidth: $screen-medium // EDIT HERE
-$mobileWidth: $screen-small // EDIT HERE
+$tabletWidth: $screen-medium
+$mobileWidth: $screen-small
 
 @mixin grid($size)
   display: block

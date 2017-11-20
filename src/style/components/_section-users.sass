@@ -2,3 +2,11 @@
   +bg-cover
   background-image: url("../assets/images/edem-brandbg2.png")
   background-attachment: fixed
+  > .container
+    > .user
+      +grid(4)
+      +card-style
+      height: 16rem
+      +media-mediumup
+        &.-first
+          +offset(left, 2)
