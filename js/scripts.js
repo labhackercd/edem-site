@@ -17,7 +17,7 @@ $(window).on('scroll', function () {
   });
 });
 
-nav.find('a').on('click', function () {
+$('.js-anchor').on('click', function () {
   var $el = $(this)
     , id = $el.attr('href');
   
