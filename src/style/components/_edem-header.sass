@@ -9,7 +9,7 @@
   right: 0
   display: flex
   justify-content: center
-  transition: height 0.3s ease
+  transition: height 0.3s linear
   box-shadow: 0 2px 8px rgba(#000, 0.4)
   z-index: 60
 
@@ -29,13 +29,20 @@
       > .toggle-menu
         display: none
 
-    > .cach-logo
-      background-color: green
-      width: 10rem
-      height: 2rem
+    > .edem-logo
+      width: 12.8rem
+      height: 4rem
       background-repeat: no-repeat
       background-size: 100%
       background-position: center
+      background-image: url("../assets/images/edem-logo.svg")
+      color: transparent
+      transition: all 0.3s linear
+
+      @at-root .-small > .container > .edem-logo
+        width: 9.6rem
+        height: 3rem
+
 
   +media-mediumdown
     &:not(.-small) > .container > .cach-logo
