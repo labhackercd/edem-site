@@ -202,6 +202,7 @@ body > main > section {
   padding-bottom: 4.5rem;
   background-color: #114433;
   color: #fff;
+  display: table;
 }
 
 body > main > section > .container {
