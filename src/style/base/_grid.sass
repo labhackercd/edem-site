@@ -16,7 +16,7 @@ $tabletWidth: $screen-medium
 $mobileWidth: $screen-small
 
 @mixin grid($size)
-  display: block
+  display: flex
   float: left
   width: calc( (#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter})
   max-width: calc(100% - #{$gutter})

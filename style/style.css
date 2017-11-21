@@ -472,12 +472,13 @@ body > main > section > .container {
 }
 
 .section-hero > .container > .title {
-  display: block;
+  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
   margin-right: calc(1.5rem/2);
   margin-left: calc(1.5rem/2);
+  display: block;
   font-weight: 500;
   font-size: calc(2.8vw + 1rem);
   line-height: calc(2.8vw + 1.5rem);
@@ -544,12 +545,13 @@ body > main > section > .container {
 }
 
 .section-features .container > .feature {
-  display: block;
+  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
   margin-right: calc(1.5rem/2);
   margin-left: calc(1.5rem/2);
+  flex-direction: column;
 }
 
 @media screen and (max-width: 960px) {
@@ -613,7 +615,7 @@ body > main > section > .container {
 
 @media (min-width: 641px) and (max-width: 960px) {
   .section-features .container > .feature {
-    display: block;
+    display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);
@@ -648,7 +650,7 @@ body > main > section > .container {
 
 @media (min-width: 961px) {
   .section-features .container > .feature {
-    margin: 0;
+    margin-top: 0;
   }
 }
 
@@ -661,7 +663,7 @@ body > main > section > .container {
 }
 
 .section-users > .container > .user {
-  display: block;
+  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -710,8 +712,12 @@ body > main > section > .container {
   }
 }
 
-.section-tools > .container > .tool-card {
-  display: block;
+.section-contact {
+  background-image: linear-gradient(#114433, #228855);
+}
+
+.tool-card {
+  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -722,10 +728,11 @@ body > main > section > .container {
   padding: 1.5rem;
   color: #000;
   height: 16rem;
+  align-items: center;
 }
 
 @media screen and (max-width: 960px) {
-  .section-tools > .container > .tool-card {
+  .tool-card {
     width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -734,7 +741,7 @@ body > main > section > .container {
 }
 
 @media screen and (max-width: 640px) {
-  .section-tools > .container > .tool-card {
+  .tool-card {
     width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -742,9 +749,13 @@ body > main > section > .container {
   }
 }
 
+.tool-card * {
+  margin: 0;
+}
+
 @media (min-width: 961px) {
-  .section-tools > .container > .tool-card {
-    display: block;
+  .tool-card {
+    display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);
@@ -754,7 +765,7 @@ body > main > section > .container {
 }
 
 @media screen and (min-width: 961px) and (max-width: 960px) {
-  .section-tools > .container > .tool-card {
+  .tool-card {
     width: calc( (12.5% - 1rem)*6 + (6 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -763,7 +774,7 @@ body > main > section > .container {
 }
 
 @media screen and (min-width: 961px) and (max-width: 640px) {
-  .section-tools > .container > .tool-card {
+  .tool-card {
     width: calc( (25% - 1rem)*6 + (6 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -771,6 +782,28 @@ body > main > section > .container {
   }
 }
 
-.section-contact {
-  background-image: linear-gradient(#114433, #228855);
+.tool-card > .logo {
+  width: 8rem;
+  min-width: 8rem;
+  height: 8rem;
+  min-height: 8rem;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.-tool-aud.tool-card > .logo {
+  background-image: url("../assets/images/tool-aud.png");
+}
+
+.-tool-wik.tool-card > .logo {
+  background-image: url("../assets/images/tool-wik.png");
+}
+
+.-tool-exp.tool-card > .logo {
+  background-image: url("../assets/images/tool-exp.png");
+}
+
+.tool-card > .info {
+  text-align: left;
 }
