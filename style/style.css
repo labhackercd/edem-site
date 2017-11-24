@@ -21,6 +21,10 @@
   outline: 0;
 }
 
+i {
+  font-style: italic;
+}
+
 html {
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "liga1" on;
@@ -80,7 +84,7 @@ h1 {
 }
 
 * + h1 {
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
 h2 {
@@ -96,7 +100,7 @@ h2 {
 }
 
 * + h2 {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 h3 {
@@ -134,7 +138,7 @@ h4 {
 h5 {
   font-weight: 500;
   line-height: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 961px) {
@@ -149,7 +153,7 @@ h5 {
 }
 
 ::selection {
-  background-color: #3399CC;
+  background-color: #EECC33;
 }
 
 html {
@@ -191,15 +195,15 @@ body > main {
 }
 
 body > main {
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 
 body > main > section {
   margin: 0;
   text-align: center;
   width: 100%;
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background-color: #114433;
   color: #fff;
   display: table;
@@ -211,6 +215,10 @@ body > main > section > .container {
   margin-right: auto;
   margin-left: auto;
   display: flow-root;
+}
+
+body > main > section > .container > .title {
+  width: 100%;
 }
 
 .edem-button {
@@ -238,7 +246,7 @@ body > main > section > .container {
 
 .edem-header {
   background-color: #fff;
-  height: 4.5rem;
+  height: 6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -251,7 +259,7 @@ body > main > section > .container {
 }
 
 .edem-header.-small {
-  height: 3rem;
+  height: 4rem;
 }
 
 .edem-header > .container {
@@ -276,8 +284,8 @@ body > main > section > .container {
 }
 
 .edem-header > .container > .edem-logo {
-  width: 14.4rem;
-  height: 4.5rem;
+  width: 19.2rem;
+  height: 6rem;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -287,8 +295,8 @@ body > main > section > .container {
 }
 
 .-small > .container > .edem-logo {
-  width: 9.6rem;
-  height: 3rem;
+  width: 12.8rem;
+  height: 4rem;
 }
 
 @media (max-width: 960px) {
@@ -307,7 +315,7 @@ body > main > section > .container {
   font-weight: 400;
   color: #000;
   background: none;
-  transition: color 0.2s linear;
+  transition: color 0.1s linear;
 }
 
 .navigation-menu > a.-active {
@@ -343,13 +351,14 @@ body > main > section > .container {
   }
   .navigation-menu > a {
     opacity: 0;
-    transition: opacity 0.4s ease;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+    transition-property: opacity;
     transition-delay: 0s;
-    transition-duration: 0.6s;
+    transition-duration: 1s;
+    transition-timing-function: ease;
   }
   .navigation-menu.-open {
     height: 100vh;
@@ -358,16 +367,19 @@ body > main > section > .container {
     opacity: 1;
   }
   .navigation-menu.-open > a:nth-last-child(1) {
-    transition-delay: 0.06s;
+    transition-delay: calc(0.1s * (1 + 1));
   }
   .navigation-menu.-open > a:nth-last-child(2) {
-    transition-delay: 0.12s;
+    transition-delay: calc(0.1s * (2 + 1));
   }
   .navigation-menu.-open > a:nth-last-child(3) {
-    transition-delay: 0.18s;
+    transition-delay: calc(0.1s * (3 + 1));
   }
   .navigation-menu.-open > a:nth-last-child(4) {
-    transition-delay: 0.24s;
+    transition-delay: calc(0.1s * (4 + 1));
+  }
+  .navigation-menu.-open > a:nth-last-child(5) {
+    transition-delay: calc(0.1s * (5 + 1));
   }
 }
 
@@ -523,13 +535,13 @@ body > main > section > .container {
 }
 
 .section-hero > .container > .edem-button {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .section-features {
   display: flow-root;
   padding-top: 0;
-  padding-bottom: 7rem;
+  padding-bottom: 8rem;
 }
 
 .section-features .container {
@@ -541,7 +553,7 @@ body > main > section > .container {
 }
 
 .section-features .container > * + * {
-  margin-top: 4.5rem;
+  margin-top: 6rem;
 }
 
 .section-features .container > .feature {
@@ -714,6 +726,102 @@ body > main > section > .container {
 
 .section-contact {
   background-image: linear-gradient(#114433, #228855);
+}
+
+.section-academy {
+  background-color: #fff;
+  color: #262626;
+}
+
+.section-academy > .container > ul > li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  display: flex;
+  float: left;
+  width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
+  max-width: calc(100% - 1.5rem);
+  margin-right: calc(1.5rem/2);
+  margin-left: calc(1.5rem/2);
+}
+
+@media screen and (max-width: 960px) {
+  .section-academy > .container > ul > li {
+    width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section-academy > .container > ul > li {
+    width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media (min-width: 961px) {
+  .section-academy > .container > ul > li {
+    display: flex;
+    float: left;
+    width: calc( (8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem);
+    max-width: calc(100% - 1.5rem);
+    margin-right: calc(1.5rem/2);
+    margin-left: calc(1.5rem/2);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 960px) {
+  .section-academy > .container > ul > li {
+    width: calc( (12.5% - 1rem)*3 + (3 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 640px) {
+  .section-academy > .container > ul > li {
+    width: calc( (25% - 1rem)*3 + (3 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+.section-academy > .container > ul > li > a {
+  padding: 0.5rem;
+  color: #3399CC;
+}
+
+.section-academy > .container > ul > li > a > span {
+  text-shadow: -0.06em 1px 0 #fff, 0.06em 1px 0 #fff;
+  background: linear-gradient(#3399CC, #3399CC);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 100% calc(100% - 1px);
+}
+
+.section-academy > .container > ul > li > a, .section-academy > .container > ul > li > a > span {
+  transition: all 0.1s ease;
+}
+
+.section-academy > .container > ul > li > a:hover {
+  color: #246b8f;
+  background-color: #f7f7f7;
+}
+
+.section-academy > .container > ul > li > a:hover > span {
+  background: none;
+  text-shadow: -0.06em 1px 0 #f7f7f7, 0.06em 1px 0 #f7f7f7;
+  background: linear-gradient(#246b8f, #246b8f);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 100% calc(100% - 1px);
 }
 
 .tool-card {

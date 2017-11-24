@@ -1,0 +1,32 @@
+.section-academy
+  background-color: #fff
+  color: hsl(0, 0, 15%)
+
+  > .container
+    
+    > ul > li
+      font-size: $font-size-centi
+      line-height: $line-height-centi
+      margin-top: $space-deci
+      text-align: left
+      +grid(4)
+      +media-mediumup
+        +grid(3)
+
+      > a
+        $color-bg: hsl(0, 0, 97%)
+        $color-hover: mix(#000, $color-link, 30%)
+        padding: $space-mili
+        color: $color-link
+        > span
+          +underline-mask
+          +underline(1px, 1px, $color-link)
+        &, > span
+          transition: all 0.1s ease
+        &:hover
+          color: $color-hover
+          background-color: $color-bg
+          > span
+            background: none
+            +underline-mask($color-bg)
+            +underline(1px, 1px, $color-hover)
