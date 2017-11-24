@@ -5,7 +5,7 @@
     font-weight: 400
     color: #000
     background: none
-    transition: color 0.2s linear
+    transition: color 0.1s linear
 
     &.-active
       color: $color-edem-green
@@ -35,13 +35,14 @@
     
     > a
       opacity: 0
-      transition: opacity 0.4s ease
       padding-top: 1rem
       padding-bottom: 1rem
       font-size: $font-size-deca
       text-align: center
+      transition-property: opacity
       transition-delay: 0s
-      transition-duration: 0.6s
+      transition-duration: 1s
+      transition-timing-function: ease
 
     &.-open
       height: 100vh
@@ -49,6 +50,6 @@
       > a
         opacity: 1
       
-        @for $i from 1 through 4
+        @for $i from 1 through 5
           &:nth-last-child(#{$i})
-            transition-delay: 0.06s * $i
+            transition-delay: calc(0.1s * (#{$i} + 1) )

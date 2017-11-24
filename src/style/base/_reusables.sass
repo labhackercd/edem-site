@@ -1,17 +1,18 @@
-=section-colors($color-background: hsl(0, 0, 95%), $color-text: hsl(0, 0, 10%), $color-title: hsl(0, 0, 80%))
-  overflow: hidden
-  background-color: $color-background
-  color: $color-text
-  text-align: center
-  > .title
-    color: $color-title
-
 =container
   width: calc(70% + 10rem) // EDIT HERE
   max-width: calc(100% - 2rem)
   margin-right: auto
   margin-left: auto
   display: flow-root
+
+=underline($offset: 0px, $width: 1px, $color: currentcolor)
+  background: linear-gradient(#{$color}, #{$color})
+  background-size: $width $width
+  background-repeat: repeat-x
+  background-position: 100% calc(100% - #{$offset})
+
+=underline-mask($color: #fff)
+  text-shadow: -0.06em 1px 0 $color, 0.06em 1px 0 $color
 
 =bg-cover
   background-size: cover
