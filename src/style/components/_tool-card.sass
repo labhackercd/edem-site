@@ -1,26 +1,26 @@
 .tool-card
-  +grid(4)
+  +grid(8)
   +card-style
-  height: 16rem
   align-items: center
   *
     margin: 0
   +media-mediumup
+    height: 16rem
     +grid(6)
-  > .logo
-    width: 8rem
-    min-width: 8rem
-    height: 8rem
-    min-height: 8rem
-    background-size: 100%
-    background-position: center
-    background-repeat: no-repeat
-    @at-root .-tool-aud#{&}
-      background-image: url("../assets/images/tool-aud.png")
-    @at-root .-tool-wik#{&}
-      background-image: url("../assets/images/tool-wik.png")
-    @at-root .-tool-exp#{&}
-      background-image: url("../assets/images/tool-exp.png")
+    > .logo
+      width: 8rem
+      min-width: 8rem
+      height: 8rem
+      min-height: 8rem
+      background-size: 100%
+      background-position: center
+      background-repeat: no-repeat
+      @at-root .-tool-aud#{&}
+        background-image: url("../assets/images/tool-aud.png")
+      @at-root .-tool-wik#{&}
+        background-image: url("../assets/images/tool-wik.png")
+      @at-root .-tool-exp#{&}
+        background-image: url("../assets/images/tool-exp.png")
 
   > .info
     text-align: left

@@ -908,7 +908,7 @@ body > main > section > .container > .title {
 .tool-card {
   display: flex;
   float: left;
-  width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
+  width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
   margin-right: calc(1.5rem/2);
   margin-left: calc(1.5rem/2);
@@ -916,13 +916,12 @@ body > main > section > .container > .title {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   color: #000;
-  height: 16rem;
   align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .tool-card {
-    width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
+    width: calc( (12.5% - 1rem)*8 + (8 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
     margin-left: calc(1rem/2);
@@ -931,7 +930,7 @@ body > main > section > .container > .title {
 
 @media screen and (max-width: 640px) {
   .tool-card {
-    width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
+    width: calc( (25% - 1rem)*8 + (8 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
     margin-left: calc(1rem/2);
@@ -944,6 +943,7 @@ body > main > section > .container > .title {
 
 @media (min-width: 961px) {
   .tool-card {
+    height: 16rem;
     display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
@@ -971,26 +971,25 @@ body > main > section > .container > .title {
   }
 }
 
-.tool-card > .logo {
-  width: 8rem;
-  min-width: 8rem;
-  height: 8rem;
-  min-height: 8rem;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.-tool-aud.tool-card > .logo {
-  background-image: url("../assets/images/tool-aud.png");
-}
-
-.-tool-wik.tool-card > .logo {
-  background-image: url("../assets/images/tool-wik.png");
-}
-
-.-tool-exp.tool-card > .logo {
-  background-image: url("../assets/images/tool-exp.png");
+@media (min-width: 961px) {
+  .tool-card > .logo {
+    width: 8rem;
+    min-width: 8rem;
+    height: 8rem;
+    min-height: 8rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .-tool-aud.tool-card > .logo {
+    background-image: url("../assets/images/tool-aud.png");
+  }
+  .-tool-wik.tool-card > .logo {
+    background-image: url("../assets/images/tool-wik.png");
+  }
+  .-tool-exp.tool-card > .logo {
+    background-image: url("../assets/images/tool-exp.png");
+  }
 }
 
 .tool-card > .info {
