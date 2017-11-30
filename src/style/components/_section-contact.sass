@@ -1,5 +1,6 @@
 .section-contact
   background-image: linear-gradient($color-background, $color-edem-green-dark)
+  padding-bottom: $space-kilo
 
   > .container > form
     +grid(6)
@@ -16,3 +17,6 @@
 
     > .edem-button
       width: auto
+      margin-top: $space-centi * 2
+      +media-mediumup
+        margin-top: $space-deci * 2

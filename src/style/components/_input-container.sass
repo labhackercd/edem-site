@@ -5,56 +5,50 @@
   $input-padding: $space-centi
   $input-line-height: $line-height-centi
 
-  $height: $input-padding + $input-line-height
-  $height-extra: 1rem
+  $height: 2*$input-padding + $input-line-height
+  $height-extra: $space-deci
+  $height-labelmovement: $height-extra/2 + $height/2
+  $height-textarea: calc( (#{$input-line-height} * 4) + (#{$input-padding} * 2) )
 
   position: relative
-
   height: $height + $height-extra
   padding-top: $height-extra
 
   *
     margin-top: 0
 
-  &.-textarea
-    height: auto
-    > .field
-      height: calc( (#{$input-line-height} * 4) + (#{$input-padding} * 2) )
-      resize: none
-      text-align: left
-
   > .field
     width: 100%
     height: $height
-
     display: block
     position: relative
-
     background-color: rgba(#000, 0.1)
-    
     line-height: $input-line-height
     font-size: 1rem
     padding: $input-padding
-    
-    box-shadow: 0 0 rgba($color-highlight, 0.6)
-    
+    box-shadow: 0 0 rgba($color-highlight, 0.6), 0 2px 4px rgba(#000, 0) inset, 0 0 0 0 rgba(#000, 0.1) inset
     transition: none
     border: 1px solid transparent
 
-
     &:focus
-      border: 1px solid $color-highlight
-      box-shadow: 0 0 0 12px transparent, 0 2px 4px rgba(#000, 0.1) inset
+      box-shadow: 0 0 0 12px transparent, 0 2px 4px rgba(#000, 0.1) inset, 0 0 0 calc(#{$height} / 2) rgba(#000, 0.1) inset
       transition: box-shadow 0.5s ease
+
+  &.-textarea
+    height: auto
+    > .field
+      height: $height-textarea
+      resize: none
+      text-align: left
+      &:focus
+        box-shadow: 0 0 0 12px transparent, 0 2px 4px rgba(#000, 0.1) inset, 0 0 0 calc(#{$height-textarea} / 2) rgba(#000, 0.1) inset
 
   > .label
     width: 100%
     padding-left: $input-padding
-
     position: absolute
-    top: $height-extra/2 + $height/2
+    top: $height-labelmovement
     left: 0
-
     font-size: $font-size-mili
     line-height: $height-extra
     letter-spacing: 0.1rem
@@ -62,17 +56,15 @@
     font-weight: 500
     color: $color-highlight
     text-align: left
-    
     pointer-events: none
-    
     transition: all 0.2s ease
   
   > .field:focus ~ .label,
   &.-filled .label,
   &.-locked .label
-    -webkit-transform: translate3d(0, -$height-extra*2, 0)
-    -moz-transform: translate3d(0, -$height-extra*2, 0)
-    transform: translate3d(0, -$height-extra*2, 0)
+    -webkit-transform: translate3d(0, -$height-labelmovement, 0)
+    -moz-transform: translate3d(0, -$height-labelmovement, 0)
+    transform: translate3d(0, -$height-labelmovement, 0)
 
   &.-error
     > .field
@@ -82,5 +74,5 @@
 
   &.-locked
     > .field
-      color: $color-highlight
+      opacity: 0.6
       pointer-events: none
