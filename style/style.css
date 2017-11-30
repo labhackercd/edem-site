@@ -685,6 +685,7 @@ body > main > section > .container > .title {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   color: #000;
+  padding: 2rem;
   height: 16rem;
 }
 
@@ -722,6 +723,23 @@ body > main > section > .container > .title {
   .section-users > .container > .user.-first {
     margin-left: calc((25% - 1rem)*2 + (2 - 1)*1rem + 1.5*1rem);
   }
+}
+
+.section-users > .container > .user > h3 {
+  color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  pointer-events: none;
+}
+
+.section-users > .container > .user.-user-cd > h3 {
+  background-image: url("../assets/images/logo-cd.svg");
+}
+
+.section-users > .container > .user.-user-cldf > h3 {
+  background-image: url("../assets/images/logo-cldf.png");
 }
 
 .section-contact {

@@ -6,7 +6,19 @@
     > .user
       +grid(4)
       +card-style
+      padding: $space-base
       height: 16rem
       +media-mediumup
         &.-first
           +offset(left, 2)
+      > h3
+        color: transparent
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        width: 100%
+        pointer-events: none
+      &.-user-cd > h3
+        background-image: url("../assets/images/logo-cd.svg")
+      &.-user-cldf > h3
+        background-image: url("../assets/images/logo-cldf.png")
