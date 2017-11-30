@@ -728,6 +728,79 @@ body > main > section > .container > .title {
   background-image: linear-gradient(#114433, #228855);
 }
 
+.section-contact > .container > form {
+  display: flex;
+  float: left;
+  width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
+  max-width: calc(100% - 1.5rem);
+  margin-right: calc(1.5rem/2);
+  margin-left: calc(1.5rem/2);
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .section-contact > .container > form {
+    width: calc( (12.5% - 1rem)*6 + (6 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section-contact > .container > form {
+    width: calc( (25% - 1rem)*6 + (6 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media (min-width: 641px) {
+  .section-contact > .container > form {
+    margin-left: calc((8.33333% - 1.5rem)*1 + (1 - 1)*1.5rem + 1.5*1.5rem);
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  .section-contact > .container > form {
+    margin-left: calc((12.5% - 1rem)*1 + (1 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 640px) {
+  .section-contact > .container > form {
+    margin-left: calc((25% - 1rem)*1 + (1 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+@media (min-width: 961px) {
+  .section-contact > .container > form {
+    margin-left: calc((8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem + 1.5*1.5rem);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 960px) {
+  .section-contact > .container > form {
+    margin-left: calc((12.5% - 1rem)*3 + (3 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 640px) {
+  .section-contact > .container > form {
+    margin-left: calc((25% - 1rem)*3 + (3 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+.section-contact > .container > form > .input-container {
+  width: 100%;
+}
+
+.section-contact > .container > form > .edem-button {
+  width: auto;
+}
+
 .section-academy {
   background-color: #fff;
   color: #262626;
@@ -914,4 +987,82 @@ body > main > section > .container > .title {
 
 .tool-card > .info {
   text-align: left;
+}
+
+.input-container {
+  position: relative;
+  height: 3.5rem;
+  padding-top: 1rem;
+}
+
+.input-container * {
+  margin-top: 0;
+}
+
+.input-container.-textarea {
+  height: auto;
+}
+
+.input-container.-textarea > .field {
+  height: calc( (1.5rem * 4) + (1rem * 2));
+  resize: none;
+  text-align: left;
+}
+
+.input-container > .field {
+  width: 100%;
+  height: 2.5rem;
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 rgba(136, 221, 170, 0.6);
+  transition: none;
+  border: 1px solid transparent;
+}
+
+.input-container > .field:focus {
+  border: 1px solid #88ddaa;
+  box-shadow: 0 0 0 12px transparent, 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+  transition: box-shadow 0.5s ease;
+}
+
+.input-container > .label {
+  width: 100%;
+  padding-left: 1rem;
+  position: absolute;
+  top: 1.75rem;
+  left: 0;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #88ddaa;
+  text-align: left;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input-container > .field:focus ~ .label,
+.input-container.-filled .label,
+.input-container.-locked .label {
+  -webkit-transform: translate3d(0, -2rem, 0);
+  -moz-transform: translate3d(0, -2rem, 0);
+  transform: translate3d(0, -2rem, 0);
+}
+
+.input-container.-error > .field {
+  border: 1px solid #FF6655;
+}
+
+.input-container.-error > .label {
+  color: #FF6655;
+}
+
+.input-container.-locked > .field {
+  color: #88ddaa;
+  pointer-events: none;
 }

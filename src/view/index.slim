@@ -82,6 +82,7 @@ html
 
       section.section-academy#trabalhos: .container
         h2.title Trabalhos Acadêmicos
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor aliquam placerat.
         ul
           li
             a href="http://buscalegis.ufsc.br/revistas/index.php/observatoriodoegov/article/view/34374/33218"
@@ -113,6 +114,18 @@ html
 
       section.section-contact#contato: .container
         h2.title Entre em contato
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor aliquam placerat.
+        form action="" method="post"
+          .input-container
+            input.field.js-input type="text" required="true" id="input-name"
+            label.label for="input-1" Seu nome
+          .input-container
+            input.field.js-input type="email" required="true" id="input-email"
+            label.label for="input-1" Endereço de email
+          .input-container.-textarea
+            textarea.field.js-input required="true" id="input-message"
+            label.label for="input-1" Mensagem
+          button.edem-button name="submit" type="submit" id="contact-submit" data-submit="...Sending" Enviar
 
     footer
 

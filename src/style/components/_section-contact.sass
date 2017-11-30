@@ -1,2 +1,18 @@
 .section-contact
   background-image: linear-gradient($color-background, $color-edem-green-dark)
+
+  > .container > form
+    +grid(6)
+    flex-direction: column
+    align-items: center
+    +media-smallup
+      +offset(left, 1)
+
+    +media-mediumup
+      +offset(left, 3)
+
+    > .input-container
+      width: 100%
+
+    > .edem-button
+      width: auto
