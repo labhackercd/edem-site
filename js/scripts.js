@@ -52,3 +52,15 @@ $(document).on('scroll', function() {
   }
   
 });
+
+$(document).ready(function() {
+
+  $('.js-input').blur(function() {
+    if ($(this).val()) {
+      $(this).closest( '.input-container' ).addClass('-filled');
+    } else {
+      $(this).closest( '.input-container' ).removeClass('-filled');
+    }
+  });
+
+});

@@ -1,2 +1,22 @@
 .section-contact
   background-image: linear-gradient($color-background, $color-edem-green-dark)
+  padding-bottom: $space-kilo
+
+  > .container > form
+    +grid(6)
+    flex-direction: column
+    align-items: center
+    +media-smallup
+      +offset(left, 1)
+
+    +media-mediumup
+      +offset(left, 3)
+
+    > .input-container
+      width: 100%
+
+    > .edem-button
+      width: auto
+      margin-top: $space-centi * 2
+      +media-mediumup
+        margin-top: $space-deci * 2
