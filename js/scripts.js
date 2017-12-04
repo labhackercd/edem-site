@@ -26,10 +26,13 @@ $('.js-anchor').on('click', function () {
 $(document).ready(function(){
 
   // Navigation menu
+  $.fn.toggleStyle = function(attributes) {
+    $(this).attr('style') ? $(this).removeAttr('style') : $(this).css(attributes);
+  }
   $('.toggle-menu').on('click', function(){
     $(this).toggleClass('-x');
     $('.navigation-menu').toggleClass('-open');
-    $('body').toggleClass('-noscroll');
+    $('body').toggleStyle({'overflowY':'hidden'});
   });
   $('.navigation-menu > a, .edem-logo').on('click', function(){
     $('.toggle-menu').removeClass('-x');
