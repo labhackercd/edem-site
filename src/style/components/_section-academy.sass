@@ -16,16 +16,16 @@
       > a
         $color-bg: hsl(0, 0, 97%)
         $color-hover: mix(#000, $color-link, 30%)
-        padding: $space-mili
         color: $color-link
+        transition: background-color 0.1s ease
         > span
           +underline-mask
           +underline(1px, 1px, $color-link)
-        &, > span
-          transition: all 0.1s ease
         &:hover
           color: $color-hover
           background-color: $color-bg
+          box-shadow: 0 0 0 $space-mili $color-bg
+          transition: box-shadow 0.1s ease, background-color 0.1s ease
           > span
             background: none
             +underline-mask($color-bg)
