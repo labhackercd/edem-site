@@ -229,6 +229,10 @@ body > main > section > .container > .title {
   width: 100%;
 }
 
+.-noscroll {
+  overflow-y: hidden;
+}
+
 .edem-button {
   background-color: #fff;
   color: #339966;
