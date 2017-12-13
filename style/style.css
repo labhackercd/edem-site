@@ -511,7 +511,6 @@ body > main > section > .container > .title {
 }
 
 .section-hero > .container > .title {
-  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -584,7 +583,6 @@ body > main > section > .container > .title {
 }
 
 .section-features .container > .feature {
-  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -654,7 +652,6 @@ body > main > section > .container > .title {
 
 @media (min-width: 641px) and (max-width: 960px) {
   .section-features .container > .feature {
-    display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);
@@ -708,6 +705,58 @@ body > main > section > .container > .title {
   color: #262626;
 }
 
+.section-about > .container > p {
+  text-align: left;
+}
+
+@media (min-width: 961px) {
+  .section-about > .container > p {
+    float: left;
+    width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
+    max-width: calc(100% - 1.5rem);
+    margin-right: calc(1.5rem/2);
+    margin-left: calc(1.5rem/2);
+    margin-left: calc((8.33333% - 1.5rem)*2 + (2 - 1)*1.5rem + 1.5*1.5rem);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 960px) {
+  .section-about > .container > p {
+    width: calc( (12.5% - 1rem)*8 + (8 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 640px) {
+  .section-about > .container > p {
+    width: calc( (25% - 1rem)*8 + (8 - 1)*1rem);
+    max-width: calc(100% - 1rem);
+    margin-right: calc(1rem/2);
+    margin-left: calc(1rem/2);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 960px) {
+  .section-about > .container > p {
+    margin-left: calc((12.5% - 1rem)*2 + (2 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 640px) {
+  .section-about > .container > p {
+    margin-left: calc((25% - 1rem)*2 + (2 - 1)*1rem + 1.5*1rem);
+  }
+}
+
+.section-about > .container > .logos > img {
+  max-height: 5rem;
+  max-width: 20rem;
+  margin: 1rem;
+  vertical-align: middle;
+}
+
 .section-users {
   background-size: cover;
   background-repeat: no-repeat;
@@ -717,9 +766,8 @@ body > main > section > .container > .title {
 }
 
 .section-users > .container > .user {
-  display: flex;
   float: left;
-  width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
+  width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
   margin-right: calc(1.5rem/2);
   margin-left: calc(1.5rem/2);
@@ -727,13 +775,14 @@ body > main > section > .container > .title {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   color: #000;
+  display: flex;
   padding: 2rem;
   height: 16rem;
 }
 
 @media screen and (max-width: 960px) {
   .section-users > .container > .user {
-    width: calc( (12.5% - 1rem)*8 + (8 - 1)*1rem);
+    width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
     margin-left: calc(1rem/2);
@@ -742,7 +791,7 @@ body > main > section > .container > .title {
 
 @media screen and (max-width: 640px) {
   .section-users > .container > .user {
-    width: calc( (25% - 1rem)*8 + (8 - 1)*1rem);
+    width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
     margin-left: calc(1rem/2);
@@ -751,43 +800,19 @@ body > main > section > .container > .title {
 
 @media (min-width: 961px) {
   .section-users > .container > .user.-first {
-    display: flex;
-    float: left;
-    width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
-    max-width: calc(100% - 1.5rem);
-    margin-right: calc(1.5rem/2);
-    margin-left: calc(1.5rem/2);
-    margin-left: calc((8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem + 1.5*1.5rem);
+    margin-left: calc((8.33333% - 1.5rem)*2 + (2 - 1)*1.5rem + 1.5*1.5rem);
   }
 }
 
 @media screen and (min-width: 961px) and (max-width: 960px) {
   .section-users > .container > .user.-first {
-    width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
-    max-width: calc(100% - 1rem);
-    margin-right: calc(1rem/2);
-    margin-left: calc(1rem/2);
+    margin-left: calc((12.5% - 1rem)*2 + (2 - 1)*1rem + 1.5*1rem);
   }
 }
 
 @media screen and (min-width: 961px) and (max-width: 640px) {
   .section-users > .container > .user.-first {
-    width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
-    max-width: calc(100% - 1rem);
-    margin-right: calc(1rem/2);
-    margin-left: calc(1rem/2);
-  }
-}
-
-@media screen and (min-width: 961px) and (max-width: 960px) {
-  .section-users > .container > .user.-first {
-    margin-left: calc((12.5% - 1rem)*4 + (4 - 1)*1rem + 1.5*1rem);
-  }
-}
-
-@media screen and (min-width: 961px) and (max-width: 640px) {
-  .section-users > .container > .user.-first {
-    margin-left: calc((25% - 1rem)*4 + (4 - 1)*1rem + 1.5*1rem);
+    margin-left: calc((25% - 1rem)*2 + (2 - 1)*1rem + 1.5*1rem);
   }
 }
 
@@ -808,13 +833,16 @@ body > main > section > .container > .title {
   background-image: url("../assets/images/logo-cldf.png");
 }
 
+.section-tools > .container > .tool-card {
+  display: flex;
+}
+
 .section-contact {
   background-image: linear-gradient(#114433, #228855);
   min-height: 100vh;
 }
 
 .section-contact > .container > form {
-  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -899,11 +927,11 @@ body > main > section > .container > .title {
 }
 
 .section-academy > .container > ul > li {
+  display: flex;
   font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 1.5rem;
   text-align: left;
-  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*4 + (4 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -931,7 +959,6 @@ body > main > section > .container > .title {
 
 @media (min-width: 961px) {
   .section-academy > .container > ul > li {
-    display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);
@@ -988,7 +1015,6 @@ body > main > section > .container > .title {
 }
 
 .tool-card {
-  display: flex;
   float: left;
   width: calc( (8.33333% - 1.5rem)*8 + (8 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -1026,7 +1052,6 @@ body > main > section > .container > .title {
 @media (min-width: 961px) {
   .tool-card {
     height: 16rem;
-    display: flex;
     float: left;
     width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);

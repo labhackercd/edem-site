@@ -16,7 +16,6 @@ $tabletWidth: $screen-medium
 $mobileWidth: $screen-small
 
 @mixin grid($size)
-  display: flex
   float: left
   width: calc( (#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter})
   max-width: calc(100% - #{$gutter})
@@ -28,7 +27,7 @@ $mobileWidth: $screen-small
     max-width: calc(100% - #{$gutterTablet})
     margin-right: calc(#{$gutterTablet}/2)
     margin-left: calc(#{$gutterTablet}/2)
- 
+
 
   @media screen and (max-width: $mobileWidth)
     width: calc( (#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile})
@@ -40,6 +39,6 @@ $mobileWidth: $screen-small
   margin-#{$side}: calc((#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter} + 1.5*#{$gutter})
   @media screen and (max-width: $tabletWidth)
     margin-#{$side}: calc((#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet} + 1.5*#{$gutterTablet})
- 
+
   @media screen and (max-width: $mobileWidth)
     margin-#{$side}: calc((#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile} + 1.5*#{$gutterMobile})

@@ -4,14 +4,14 @@
   background-attachment: fixed
   > .container
     > .user
-      +grid(8)
+      +grid(4)
       +card-style
+      display: flex
       padding: $space-base
       height: 16rem
       +media-mediumup
         &.-first
-          +grid(4)
-          +offset(left, 4)
+          +offset(left, 2)
       > h3
         color: transparent
         background-size: contain
