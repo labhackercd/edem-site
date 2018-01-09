@@ -1,4 +1,13 @@
 {
+  "name": "edem-site",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": "git@github.com:labhackercd/edem-site.git",
+  "author": "Lab Hacker",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-minify-css": "latest",
