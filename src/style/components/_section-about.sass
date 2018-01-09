@@ -1,3 +1,17 @@
 .section-about
   background-color: #fff
   color: hsl(0, 0, 15%)
+
+  > .container
+
+    > p
+      text-align: left
+      +media-mediumup
+        +grid(8)
+        +offset(left, 2)
+
+    > .logos > img
+      max-height: 5rem
+      max-width: 20rem
+      margin: 1rem
+      vertical-align: middle
