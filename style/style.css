@@ -936,12 +936,20 @@ body > main > section > .container > .title {
   }
 }
 
-.section-academy {
+.section-links {
   background-color: #fff;
   color: #262626;
 }
 
-.section-academy > .container > ul > li {
+.section-links > .container > .title {
+  display: table;
+}
+
+.section-links > .container > .title:not(:first-child) {
+  padding-top: 4rem;
+}
+
+.section-links > .container > ul > li {
   display: flex;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -955,7 +963,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (max-width: 960px) {
-  .section-academy > .container > ul > li {
+  .section-links > .container > ul > li {
     width: calc( (12.5% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -964,7 +972,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (max-width: 640px) {
-  .section-academy > .container > ul > li {
+  .section-links > .container > ul > li {
     width: calc( (25% - 1rem)*4 + (4 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -973,7 +981,7 @@ body > main > section > .container > .title {
 }
 
 @media (min-width: 961px) {
-  .section-academy > .container > ul > li {
+  .section-links > .container > ul > li {
     float: left;
     width: calc( (8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem);
     max-width: calc(100% - 1.5rem);
@@ -983,7 +991,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (min-width: 961px) and (max-width: 960px) {
-  .section-academy > .container > ul > li {
+  .section-links > .container > ul > li {
     width: calc( (12.5% - 1rem)*3 + (3 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -992,7 +1000,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (min-width: 961px) and (max-width: 640px) {
-  .section-academy > .container > ul > li {
+  .section-links > .container > ul > li {
     width: calc( (25% - 1rem)*3 + (3 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -1000,12 +1008,12 @@ body > main > section > .container > .title {
   }
 }
 
-.section-academy > .container > ul > li > a {
+.section-links > .container > ul > li > a {
   color: #3399CC;
   transition: background-color 0.1s ease;
 }
 
-.section-academy > .container > ul > li > a > span {
+.section-links > .container > ul > li > a > span {
   text-shadow: -0.06em 1px 0 #fff, 0.06em 1px 0 #fff;
   background: linear-gradient(#3399CC, #3399CC);
   background-size: 1px 1px;
@@ -1013,14 +1021,14 @@ body > main > section > .container > .title {
   background-position: 100% calc(100% - 1px);
 }
 
-.section-academy > .container > ul > li > a:hover {
+.section-links > .container > ul > li > a:hover {
   color: #246b8f;
   background-color: #f7f7f7;
   box-shadow: 0 0 0 0.5rem #f7f7f7;
   transition: box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
-.section-academy > .container > ul > li > a:hover > span {
+.section-links > .container > ul > li > a:hover > span {
   background: none;
   text-shadow: -0.06em 1px 0 #f7f7f7, 0.06em 1px 0 #f7f7f7;
   background: linear-gradient(#246b8f, #246b8f);

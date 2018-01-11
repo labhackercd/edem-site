@@ -1,8 +1,14 @@
-.section-academy
+.section-links
   background-color: #fff
   color: hsl(0, 0, 15%)
 
   > .container
+
+    // Sorry I did this, please delete the next four lines when possible
+    > .title
+      display: table
+      &:not(:first-child)
+        padding-top: $space-deca
 
     > ul > li
       display: flex
