@@ -848,6 +848,14 @@ body > main > section > .container > .title {
   background-image: url("../assets/images/logo-cldf.png");
 }
 
+.section-users > .container > .user.-user-transp > h3 {
+  background-image: url("../assets/images/logo-transp.png");
+}
+
+.section-users > .container > .user.-user-anvisa > h3 {
+  background-image: url("../assets/images/logo-anvisa.png");
+}
+
 .section-tools > .container > .tool-card {
   display: flex;
 }
@@ -1160,6 +1168,7 @@ body > main > section > .container > .title {
 }
 
 .input-container.-textarea > .field {
+  font-family: "Roboto", Helvetica, sans-serif;
   height: calc( (1.5rem * 4) + (1rem * 2));
   resize: none;
   text-align: left;
