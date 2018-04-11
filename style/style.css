@@ -957,8 +957,14 @@ body > main > section > .container > .title {
   padding-top: 4rem;
 }
 
+.section-links > .container > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .section-links > .container > ul > li {
   display: flex;
+  flex-direction: column;
   font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 1.5rem;
@@ -1018,6 +1024,7 @@ body > main > section > .container > .title {
 
 .section-links > .container > ul > li > a {
   color: #3399CC;
+  flex: 0 0 auto;
   transition: background-color 0.1s ease;
 }
 

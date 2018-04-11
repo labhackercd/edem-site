@@ -10,30 +10,36 @@
       &:not(:first-child)
         padding-top: $space-deca
 
-    > ul > li
-      display: flex
-      font-size: $font-size-centi
-      line-height: $line-height-centi
-      margin-top: $space-deci
-      text-align: left
-      +grid(4)
-      +media-mediumup
-        +grid(3)
+    > ul
+      display: flex;
+      flex-wrap: wrap;
 
-      > a
-        $color-bg: hsl(0, 0, 97%)
-        $color-hover: mix(#000, $color-link, 30%)
-        color: $color-link
-        transition: background-color 0.1s ease
-        > span
-          +underline-mask
-          +underline(1px, 1px, $color-link)
-        &:hover
-          color: $color-hover
-          background-color: $color-bg
-          box-shadow: 0 0 0 $space-mili $color-bg
-          transition: box-shadow 0.1s ease, background-color 0.1s ease
+      > li
+        display: flex
+        flex-direction: column
+        font-size: $font-size-centi
+        line-height: $line-height-centi
+        margin-top: $space-deci
+        text-align: left
+        +grid(4)
+        +media-mediumup
+          +grid(3)
+
+        > a
+          $color-bg: hsl(0, 0, 97%)
+          $color-hover: mix(#000, $color-link, 30%)
+          color: $color-link
+          flex: 0 0 auto
+          transition: background-color 0.1s ease
           > span
-            background: none
-            +underline-mask($color-bg)
-            +underline(1px, 1px, $color-hover)
+            +underline-mask
+            +underline(1px, 1px, $color-link)
+          &:hover
+            color: $color-hover
+            background-color: $color-bg
+            box-shadow: 0 0 0 $space-mili $color-bg
+            transition: box-shadow 0.1s ease, background-color 0.1s ease
+            > span
+              background: none
+              +underline-mask($color-bg)
+              +underline(1px, 1px, $color-hover)
