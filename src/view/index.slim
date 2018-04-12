@@ -283,7 +283,7 @@ html
       section.section-contact#contato: .container
         h2.title Entre em contato
         p Ficou interessado na plataforma? Tem alguma dúvida? Entre em contato conosco:
-        form action="" method="post"
+        form#contact-form action="https://dev.edemocracia.labhackercd.leg.br/contact-us" method="post"
           .input-container
             input.field.js-input type="text" required="true" id="input-name" name="name"
             label.label for="input-1" Seu nome
@@ -293,7 +293,8 @@ html
           .input-container.-textarea
             textarea.field.js-input required="true" id="input-message" name="message"
             label.label for="input-1" Mensagem
-          button.edem-button name="submit" type="submit" id="contact-submit" data-submit="...Sending" Enviar
+          button.edem-button.-big name="submit" type="submit" id="contact-submit" data-submit="...Sending" Enviar
+          p.error.js-error
 
     footer
 

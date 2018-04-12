@@ -327,7 +327,7 @@
           <p>
             Ficou interessado na plataforma? Tem alguma dúvida? Entre em contato conosco:
           </p>
-          <form action="" method="post">
+          <form action="https://dev.edemocracia.labhackercd.leg.br/contact-us" id="contact-form" method="post">
             <div class="input-container">
               <input class="field js-input" id="input-name" name="name" required="true" type="text" /><label class="label" for="input-1">Seu nome</label>
             </div>
@@ -337,7 +337,8 @@
             <div class="input-container -textarea">
               <textarea class="field js-input" id="input-message" name="message" required="true"></textarea><label class="label" for="input-1">Mensagem</label>
             </div>
-            <button class="edem-button" data-submit="...Sending" id="contact-submit" name="submit" type="submit">Enviar</button>
+            <button class="edem-button -big" data-submit="...Sending" id="contact-submit" name="submit" type="submit">Enviar</button>
+            <p class="error js-error"></p>
           </form>
         </div>
       </section>

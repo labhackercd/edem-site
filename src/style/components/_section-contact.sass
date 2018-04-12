@@ -20,3 +20,15 @@
       margin-top: $space-centi * 2
       +media-mediumup
         margin-top: $space-deci * 2
+
+    > .error
+      visibility: hidden
+      opacity: 0
+      font-weight: 700;
+      transform: translateY(-50%)
+      transition: all 0.3s $swift-out
+
+      &.-show
+        visibility: visible
+        opacity: 1
+        transform: translateY(0)
