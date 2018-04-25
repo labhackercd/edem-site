@@ -17,6 +17,32 @@
   *
     margin-top: 0
 
+  &.input-group
+    position: relative
+
+    .field
+      padding-right: 4rem
+
+    .help
+      display: flex
+      justify-content: center
+      align-items: center
+      position: absolute
+      right: 0
+      width: $height-extra
+      height: $height-extra
+      background-color: rgba(0, 0, 0, 0.2)
+      margin-right: $input-padding
+      top: $height-labelmovement
+      cursor: help
+      user-select: none
+
+      > span
+        color: $color-edem-green-light
+        line-height: 1em
+        font-size: 1em
+        font-weight: 800
+
   > .field
     width: 100%
     height: $height

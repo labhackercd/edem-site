@@ -1,0 +1,133 @@
+html
+
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    title e-Democracia
+    meta name="description" content="Uma plataforma inovadora de transparência e participação popular"
+    meta name="author" content="Laboratório Hacker"
+    meta name="keywords" content="democracia"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="referrer" content="origin"
+    link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png"
+    link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png"
+    link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png"
+    link rel="manifest" href="assets/favicons/manifest.json"
+    link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#003322"
+    meta name="theme-color" content="#ffffff"
+    link href="./style/style.css" rel="stylesheet" type='text/css'
+
+  body
+
+    header.edem-header: .container
+      a.edem-logo.js-anchor href="#home" e-Democracia
+
+    main
+      section.section-contact: .container
+        h2.title Como instalar um e-Democracia?
+        p
+          | Hoje a instalação é feita utilizando a tecnologia Docker e você vai precisar basicamente de um arquivo que será gerado de acordo com as suas necessidades, utilizando o formulário abaixo. As instruções para instalação estão no nosso 
+          a target="_new" href="https://paper.dropbox.com/doc/e-Democracia-Guia-de-Instalacao-Op8yJ9DkkBfSchBjDFqsZ?_tk=share_copylink" Guia de Instalação
+          | .
+        form.form.js-compose-form
+          .fieldset
+            p.fieldset-title Configuração de Usuário Administrador
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="admin_username" name="admin_username"
+              label.label for="admin_username" Nome de Usuário Administrador
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="admin_email" name="admin_email"
+              label.label for="admin_email" Email do Administrador
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="admin_password" name="admin_password"
+              label.label for="admin_password" Senha do Usuário Administrador
+          .fieldset
+            p.fieldset-title Configuração do Site
+            .input-container.input-group
+              input.field.js-input type="text" id="site_name" name="site_name"
+              label.label for="site_name" Nome do Site
+              .help title="Nome que identificará a sua instância do e-Democracia. Ex: Câmara dos Deputados, ANVISA, ANAC"
+                span ?
+            .input-container.input-group
+              input.field.js-input type="text" id="site_logo" name="site_logo"
+              label.label for="site_logo" URL da Logo
+              .help title="URL completa (com http:// ou https://) com a logo da sua instituição, de preferência com fundo transparente (.png). Leve em consideração que ela ficará em um fundo branco"
+                span ?
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="site_url" name="site_url"
+              label.label for="site_url" Domínio do Site
+              .help title="Domínio da sua instância, sem http ou https. Ex: edemocracia.camara.leg.br"
+                span ?
+          .fieldset
+            p.fieldset-title Configuração reCAPTCHA
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="recaptcha_site_key" name="recaptcha_site_key"
+              label.label for="recaptcha_site_key" Chave Pública do reCAPTCHA
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="recaptcha_private_key" name="recaptcha_private_key"
+              label.label for="recaptcha_private_key" Chave Privada do reCAPTCHA
+          .fieldset
+            p.fieldset-title Configuração de Login Social
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="google_oauth2_key" name="google_oauth2_key"
+              label.label for="google_oauth2_key" Chave Pública Google+
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="google_oauth2_secret" name="google_oauth2_secret"
+              label.label for="google_oauth2_secret" Chave Privada Google+
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="facebook_key" name="facebook_key"
+              label.label for="facebook_key" Chave Pública Facebook
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="facebook_secret" name="facebook_secret"
+              label.label for="facebook_secret" Chave Privada Facebook
+          .fieldset
+            p.fieldset-title Configuração de Email
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="email_host" name="email_host"
+              label.label for="email_host" Host do Servidor de Email
+              .help title="Endereço do seu servidor de email. Ex: smtp.google.com"
+                span ?
+            .input-container.input-group
+              input.field.js-input type="text" required="true" id="email_port" name="email_port"
+              label.label for="email_port" Porta do Servidor de Email
+              .help title="Porta usada pelo seu servidor de email. Ex: 587"
+                span ?
+            .input-container.input-group
+              input.field.js-input type="text" id="email_host_user" name="email_host_user"
+              label.label for="email_host_user" Usuário do Servidor de Email
+              .help title="Usuário com permissão de envio de email do seu servidor. Pode ficar em branco, de acordo com a configuração do seu servidor. Ex: seuemail@gmail.com"
+                span ?
+            .input-container.input-group
+              input.field.js-input type="text" id="email_host_password" name="email_host_password"
+              label.label for="email_host_password" Senha do Servidor de Email
+              .help title="Senha do usuário com permissão de envio de email do seu servidor. Pode ficar em branco, de acordo com a configuração do seu servidor."
+                span ?
+            .checkbox-container
+              input.field.js-input type="checkbox" id="email_use_tls" name="email_use_tls"
+              label.label for="email_use_tls" Email Utiliza TLS
+          .fieldset
+            p.fieldset-title Módulos do e-Democracia
+            .checkbox-container
+              input.field.js-input type="checkbox" id="wikilegis_enabled" name="wikilegis_enabled"
+              label.label for="wikilegis_enabled" Habilitar Wikilegis
+            .checkbox-container
+              input.field.js-input type="checkbox" id="audiencias_enabled" name="audiencias_enabled"
+              label.label for="audiencias_enabled" Habilitar Audiências Interativas
+            .checkbox-container
+              input.field.js-input type="checkbox" id="discourse_enabled" name="discourse_enabled"
+              label.label for="discourse_enabled" Habilitar Expressão
+
+          button.edem-button.-big.js-generate-compose name="submit" Gerar Arquivo
+
+    footer
+
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"
+    script src="js/scripts.js"
+    script src="js/compose.js"
+
+    javascript:
+      tippy('.help', {
+        size: 'large',
+        theme: 'edem'
+      })

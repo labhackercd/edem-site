@@ -7,6 +7,7 @@ Website for e-Democracia
 
 To run this project you'll need the following installed:
 
++ [Slim](http://slim-lang.com/)
 + [NodeJS](http://nodejs.org) - use the installer
 + [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp`
 

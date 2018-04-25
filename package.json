@@ -16,5 +16,8 @@
     "gulp-sass": "latest",
     "gulp-slim": "latest",
     "gulp-uglify": "latest"
+  },
+  "dependencies": {
+    "tippy.js": "^2.5.2"
   }
 }

@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <title>e-Democracia</title>
+    <meta content="Uma plataforma inovadora de transparência e participação popular" name="description" />
+    <meta content="Laboratório Hacker" name="author" />
+    <meta content="democracia" name="keywords" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="origin" name="referrer" />
+    <link href="assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="assets/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="assets/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="assets/favicons/manifest.json" rel="manifest" />
+    <link color="#003322" href="assets/favicons/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#ffffff" name="theme-color" />
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="edem-header">
+      <div class="container">
+        <a class="edem-logo js-anchor" href="#home">e-Democracia</a>
+      </div>
+    </header>
+    <main>
+      <section class="section-contact">
+        <div class="container">
+          <h2 class="title">
+            Como instalar um e-Democracia?
+          </h2>
+          <p>
+            Hoje a instalação é feita utilizando a tecnologia Docker e você vai precisar basicamente de um arquivo que será gerado de acordo com as suas necessidades, utilizando o formulário abaixo. As instruções para instalação estão no nosso <a href="https://paper.dropbox.com/doc/e-Democracia-Guia-de-Instalacao-Op8yJ9DkkBfSchBjDFqsZ?_tk=share_copylink" target="_new">Guia de Instalação</a>.
+          </p>
+          <form class="form js-compose-form">
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Configuração de Usuário Administrador
+              </p>
+              <div class="input-container input-group">
+                <input class="field js-input" id="admin_username" name="admin_username" required="true" type="text" /><label class="label" for="admin_username">Nome de Usuário Administrador</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="admin_email" name="admin_email" required="true" type="text" /><label class="label" for="admin_email">Email do Administrador</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="admin_password" name="admin_password" required="true" type="text" /><label class="label" for="admin_password">Senha do Usuário Administrador</label>
+              </div>
+            </div>
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Configuração do Site
+              </p>
+              <div class="input-container input-group">
+                <input class="field js-input" id="site_name" name="site_name" type="text" /><label class="label" for="site_name">Nome do Site</label>
+                <div class="help" title="Nome que identificará a sua instância do e-Democracia. Ex: Câmara dos Deputados, ANVISA, ANAC">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="site_logo" name="site_logo" type="text" /><label class="label" for="site_logo">URL da Logo</label>
+                <div class="help" title="URL completa (com http:// ou https://) com a logo da sua instituição, de preferência com fundo transparente (.png). Leve em consideração que ela ficará em um fundo branco">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="site_url" name="site_url" required="true" type="text" /><label class="label" for="site_url">Domínio do Site</label>
+                <div class="help" title="Domínio da sua instância, sem http ou https. Ex: edemocracia.camara.leg.br">
+                  <span>?</span>
+                </div>
+              </div>
+            </div>
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Configuração reCAPTCHA
+              </p>
+              <div class="input-container input-group">
+                <input class="field js-input" id="recaptcha_site_key" name="recaptcha_site_key" required="true" type="text" /><label class="label" for="recaptcha_site_key">Chave Pública do reCAPTCHA</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="recaptcha_private_key" name="recaptcha_private_key" required="true" type="text" /><label class="label" for="recaptcha_private_key">Chave Privada do reCAPTCHA</label>
+              </div>
+            </div>
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Configuração de Login Social
+              </p>
+              <div class="input-container input-group">
+                <input class="field js-input" id="google_oauth2_key" name="google_oauth2_key" required="true" type="text" /><label class="label" for="google_oauth2_key">Chave Pública Google+</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="google_oauth2_secret" name="google_oauth2_secret" required="true" type="text" /><label class="label" for="google_oauth2_secret">Chave Privada Google+</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="facebook_key" name="facebook_key" required="true" type="text" /><label class="label" for="facebook_key">Chave Pública Facebook</label>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="facebook_secret" name="facebook_secret" required="true" type="text" /><label class="label" for="facebook_secret">Chave Privada Facebook</label>
+              </div>
+            </div>
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Configuração de Email
+              </p>
+              <div class="input-container input-group">
+                <input class="field js-input" id="email_host" name="email_host" required="true" type="text" /><label class="label" for="email_host">Host do Servidor de Email</label>
+                <div class="help" title="Endereço do seu servidor de email. Ex: smtp.google.com">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="email_port" name="email_port" required="true" type="text" /><label class="label" for="email_port">Porta do Servidor de Email</label>
+                <div class="help" title="Porta usada pelo seu servidor de email. Ex: 587">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="email_host_user" name="email_host_user" type="text" /><label class="label" for="email_host_user">Usuário do Servidor de Email</label>
+                <div class="help" title="Usuário com permissão de envio de email do seu servidor. Pode ficar em branco, de acordo com a configuração do seu servidor. Ex: seuemail@gmail.com">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="input-container input-group">
+                <input class="field js-input" id="email_host_password" name="email_host_password" type="text" /><label class="label" for="email_host_password">Senha do Servidor de Email</label>
+                <div class="help" title="Senha do usuário com permissão de envio de email do seu servidor. Pode ficar em branco, de acordo com a configuração do seu servidor.">
+                  <span>?</span>
+                </div>
+              </div>
+              <div class="checkbox-container">
+                <input class="field js-input" id="email_use_tls" name="email_use_tls" type="checkbox" /><label class="label" for="email_use_tls">Email Utiliza TLS</label>
+              </div>
+            </div>
+            <div class="fieldset">
+              <p class="fieldset-title">
+                Módulos do e-Democracia
+              </p>
+              <div class="checkbox-container">
+                <input class="field js-input" id="wikilegis_enabled" name="wikilegis_enabled" type="checkbox" /><label class="label" for="wikilegis_enabled">Habilitar Wikilegis</label>
+              </div>
+              <div class="checkbox-container">
+                <input class="field js-input" id="audiencias_enabled" name="audiencias_enabled" type="checkbox" /><label class="label" for="audiencias_enabled">Habilitar Audiências Interativas</label>
+              </div>
+              <div class="checkbox-container">
+                <input class="field js-input" id="discourse_enabled" name="discourse_enabled" type="checkbox" /><label class="label" for="discourse_enabled">Habilitar Expressão</label>
+              </div>
+            </div>
+            <button class="edem-button -big js-generate-compose" name="submit">Gerar Arquivo</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/compose.js"></script>
+    <script>
+      tippy('.help', {
+        size: 'large',
+        theme: 'edem'
+      })
+    </script>
+  </body>
+</html>

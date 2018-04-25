@@ -318,6 +318,14 @@ body > main > section > .container > .title {
   font-size: 1.5rem;
 }
 
+.edem-button.-hide {
+  display: none;
+}
+
+.edem-button.-disabled {
+  opacity: 0;
+}
+
 .edem-button.-negative::before {
   background-color: #FF6655;
 }
@@ -1016,7 +1024,7 @@ body > main > section > .container > .title {
   min-height: 100vh;
 }
 
-.section-contact > .container > form {
+.section-contact > .container > .form {
   float: left;
   width: calc( (8.33333% - 1.5rem)*6 + (6 - 1)*1.5rem);
   max-width: calc(100% - 1.5rem);
@@ -1027,7 +1035,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (max-width: 960px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     width: calc( (12.5% - 1rem)*6 + (6 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -1036,7 +1044,7 @@ body > main > section > .container > .title {
 }
 
 @media screen and (max-width: 640px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     width: calc( (25% - 1rem)*6 + (6 - 1)*1rem);
     max-width: calc(100% - 1rem);
     margin-right: calc(1rem/2);
@@ -1045,57 +1053,134 @@ body > main > section > .container > .title {
 }
 
 @media (min-width: 641px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((8.33333% - 1.5rem)*1 + (1 - 1)*1.5rem + 1.5*1.5rem);
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((12.5% - 1rem)*1 + (1 - 1)*1rem + 1.5*1rem);
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 640px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((25% - 1rem)*1 + (1 - 1)*1rem + 1.5*1rem);
   }
 }
 
 @media (min-width: 961px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((8.33333% - 1.5rem)*3 + (3 - 1)*1.5rem + 1.5*1.5rem);
   }
 }
 
 @media screen and (min-width: 961px) and (max-width: 960px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((12.5% - 1rem)*3 + (3 - 1)*1rem + 1.5*1rem);
   }
 }
 
 @media screen and (min-width: 961px) and (max-width: 640px) {
-  .section-contact > .container > form {
+  .section-contact > .container > .form {
     margin-left: calc((25% - 1rem)*3 + (3 - 1)*1rem + 1.5*1rem);
   }
 }
 
-.section-contact > .container > form > .input-container {
+.section-contact > .container > .form > .fieldset {
+  margin-top: 3rem;
+}
+
+.section-contact > .container > .form > .fieldset > .input-container:first-of-type {
+  margin-top: 1rem;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container > .label {
+  margin: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+  width: 100%;
+  left: 0;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #88ddaa;
+  text-align: left;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container > .field {
+  position: relative;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container > .field:before {
+  content: "";
+  transition: all 0.3s ease-in-out;
+  left: 0;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  border: 0px solid #1a6e46;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container > .field:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #1a6e46;
+  cursor: pointer;
+}
+
+.section-contact > .container > .form > .fieldset > .checkbox-container > .field:checked:before {
+  height: 0.75rem;
+  border: 3px solid white;
+  border-top-style: none;
+  border-right-style: none;
+  transform: rotate(-45deg);
+}
+
+.section-contact > .container > .form > .fieldset > .fieldset-title {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: left;
+}
+
+.section-contact > .container > .form > .input-container {
   width: 100%;
 }
 
-.section-contact > .container > form > .edem-button {
+.section-contact > .container > .form > .edem-button {
   width: auto;
   margin-top: 2rem;
 }
 
 @media (min-width: 961px) {
-  .section-contact > .container > form > .edem-button {
+  .section-contact > .container > .form > .edem-button {
     margin-top: 3rem;
   }
 }
 
-.section-contact > .container > form > .error {
+.section-contact > .container > .form > .error {
   visibility: hidden;
   opacity: 0;
   font-weight: 700;
@@ -1103,7 +1188,7 @@ body > main > section > .container > .title {
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-.section-contact > .container > form > .error.-show {
+.section-contact > .container > .form > .error.-show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
@@ -1316,6 +1401,36 @@ body > main > section > .container > .title {
   margin-top: 0;
 }
 
+.input-container.input-group {
+  position: relative;
+}
+
+.input-container.input-group .field {
+  padding-right: 4rem;
+}
+
+.input-container.input-group .help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-right: 1rem;
+  top: 2.5rem;
+  cursor: help;
+  user-select: none;
+}
+
+.input-container.input-group .help > span {
+  color: #88ddaa;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: 800;
+}
+
 .input-container > .field {
   width: 100%;
   height: 3.5rem;
@@ -1386,4 +1501,23 @@ body > main > section > .container > .title {
 .input-container.-locked > .field {
   opacity: 0.6;
   pointer-events: none;
+}
+
+.tippy-content {
+  margin-top: 0;
+}
+
+.tippy-tooltip.edem-theme {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: #88ddaa;
+}
+
+.tippy-tooltip.edem-theme > .tippy-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
